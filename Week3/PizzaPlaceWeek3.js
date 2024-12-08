@@ -28,12 +28,13 @@ function getPizzaOrder(size, crust, ...toppings) {
   return [size, crust, toppings];
 }
 
-function preparePizza(size, crust, ...toppings) {
+function preparePizza(pizzaArray) {
+  // size, crust, ...toppings
   console.log("...Hucking chunks of oblong beef onto a pizza crust...");
   let pizza = {
-    size: size,
-    crust: crust,
-    toppings: toppings[0]
+    size: pizzaArray[0],
+    crust: pizzaArray[1],
+    toppings: pizzaArray.slice(2)
   };
   return pizza;
 }
@@ -50,6 +51,6 @@ function servePizza(pizza) {
 greetCustomer();
 let pizzaOrder = getPizzaOrder("none", "left", "beef", "beef", "beef", "beef");
 
-let pizza = preparePizza(pizzaOrder[0], pizzaOrder[1], pizzaOrder[2]);
+let pizza = preparePizza([pizzaOrder[0], pizzaOrder[1], pizzaOrder[2]]);
 
 servePizza(pizza);
