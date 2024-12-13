@@ -1,0 +1,125 @@
+@font-face {
+  font-family: DS;
+  src: url("Nintendo-DS-BIOS.ttf");
+}
+
+@font-face {
+  font-family: permanent-marker;
+  src: url("Permanentmarker-Regular.ttf");
+}
+
+h1 {
+  font-family: permanent-marker;
+}
+
+h1, h2 {
+  text-shadow: 2px 2px white, -2px 2px white, 2px -2px white, -2px -2px white;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+body {
+  background-image: url("img/glitter.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+  animation: shimmer 30s infinite;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  grid-area: header; 
+  min-width: 300px; 
+  font-family: DS; font-size: x-large; 
+  padding: 8px;
+  text-align: center;
+  color:magenta;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.manyland_header{
+  margin: 0 auto;
+  grid-area: header; 
+  width: 80%;
+  font-family: permanent-marker; font-size: x-large; 
+  padding: 8px;
+  color:rgb(255, 245, 227); 
+  text-align: left; 
+  background-color: rgba(212, 30, 173, 0.9);
+  border-radius: 5px;
+  border: 5px solid rgba(142, 10, 114, 0.9);
+  
+}
+
+.manyland_body {
+  margin: 0 auto;
+  width: 80%;
+  grid-area: body; 
+  padding: 8px;
+  color:rgb(0, 0, 0);
+  text-align: left;
+  background-color: rgba(179, 250, 165, 0.9);
+  border-radius: 5px;
+  border: 5px solid rgba(84, 138, 73, 0.9);
+}
+
+#footer {
+  grid-area: footer; 
+  background-color:rgba(255, 255, 255, 1);
+  padding: 5px;
+  border: 5px solid rgb(134, 134, 134);
+  border-radius: 5px;
+  margin: 10px;
+  color: black;
+}
+
+.ml_screenshots {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  padding: 10px;
+}
+
+figcaption {
+  font-size: larger;
+  font-weight: bold;
+}
+
+
+@keyframes move-it {
+  0% {
+    background-position: initial;
+  }
+  100% {
+    background-position: 300px -100px;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: initial;
+    background-color: initial;
+  }
+  25% {
+    background-color: lime;
+    background-position: 50px 50px;
+  }
+  50% {
+    background-color: aqua;
+    background-position: 25px 25px;
+  }
+  75% {
+    background-color: rgb(255, 94, 0);
+    background-position: -25px -25px;
+  }
+  100% {
+    background-position: initial;
+    background-color: initial;
+  }
+}
